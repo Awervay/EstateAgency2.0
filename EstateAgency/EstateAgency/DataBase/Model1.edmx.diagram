@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="718a621d056d423d812c9eceaef28b89" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="VinidiktovDay1Model.Agents" Width="1.5" PointX="3.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.ApartmentDemands" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.Apartments" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.Clients" Width="1.5" PointX="3.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.Districts" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.HouseDemands" Width="1.5" PointX="6" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.Houses" Width="1.5" PointX="3" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.LandDemands" Width="1.5" PointX="6" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.Lands" Width="1.5" PointX="3" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="VinidiktovDay1Model.Street" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_ApartmentDemands_Agents" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_HouseDemands_Agents" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_LandDemands_Agents" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_ApartmentDemands_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_ApartmentDemands_Street" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_Apartments_Street" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_HouseDemands_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_LandDemands_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_HouseDemands_Street" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_Houses_Street" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_LandDemands_Street" ManuallyRouted="false" />
+        <AssociationConnector Association="VinidiktovDay1Model.FK_Lands_Street" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

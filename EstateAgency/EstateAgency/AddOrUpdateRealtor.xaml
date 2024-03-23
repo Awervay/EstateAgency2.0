@@ -1,0 +1,33 @@
+﻿<Window x:Class="EstateAgency.AddOrUpdateRealtor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EstateAgency"
+        mc:Ignorable="d"
+            Title="Добавить/изменить информацию о риелторе" Height="200" Width="410" MinHeight="200" MinWidth="410" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Margin="5" Text="Фамилия:" />
+            <TextBox Grid.Row="0" x:Name="SurnameTB" PreviewTextInput="SurnameTB_PreviewTextInput" PreviewKeyDown="SurnameTB_PreviewKeyDown" Margin="5" Width="200"/>
+            <TextBlock Grid.Row="1"  Margin="5" Text="Имя:" />
+            <TextBox Grid.Row="1" x:Name="NameTB" PreviewTextInput="SurnameTB_PreviewTextInput" PreviewKeyDown="SurnameTB_PreviewKeyDown" Margin="5" Width="200"/>
+            <TextBlock Grid.Row="2" Margin="5" Text="Отчество:" />
+            <TextBox Grid.Row="2" x:Name="SecondNameTB" PreviewTextInput="SurnameTB_PreviewTextInput" PreviewKeyDown="SurnameTB_PreviewKeyDown" Margin="5" Width="200"/>
+            <TextBlock Grid.Row="3" Margin="5" Text="Доля комиссии:" />
+            <TextBox Grid.Row="3" x:Name="CountDealTB" PreviewTextInput="CountDealTB_PreviewTextInput" PreviewKeyDown="SurnameTB_PreviewKeyDown" Margin="5" Width="200"/>
+            <Button x:Name="SaveRealtor" Click="SaveRealtor_Click" Content="Сохранить" Grid.Row="6"/>
+            <Button x:Name="CloseRealtor" Click="CloseRealtor_Click" Content="Отменить" Grid.Row="7"/>
+        </Grid>
+    </Grid>
+</Window>

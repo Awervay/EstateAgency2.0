@@ -1,0 +1,98 @@
+﻿<Window x:Class="EstateAgency.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EstateAgency"
+        mc:Ignorable="d"
+        Title="Агенство недвижимости" Height="450" Width="930" MinHeight="450" MinWidth="930" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Реилторы">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="410"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="680"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="InfoAgents" Grid.Row="0" Grid.Column="1" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Фамилия" IsReadOnly="True" Binding="{Binding FirstName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Имя" IsReadOnly="True" Binding="{Binding MiddleName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Отчество" IsReadOnly="True" Binding="{Binding LastName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Доля комиссии" IsReadOnly="True" Binding="{Binding DealShare}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Vertical" Grid.Row="0" Margin="10,0,0,0">
+                        <TextBlock Text="Поиск " VerticalAlignment="Top" HorizontalAlignment="Left" Width="235"/>
+                        <TextBox VerticalAlignment="Center" x:Name="SearchAgentsTB" TextChanged="SearchAgentsTB_TextChanged" Width="215" Height="30" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="10,0,0,0"/>
+                        <Button x:Name="AddAgent" Margin="10" Click="AddAgent_Click" Content="Добавить" FontSize="16"/>
+                        <Button x:Name="RedactAgent" Margin="10" Click="RedactAgent_Click" Content="Редактировать" FontSize="16"/>
+                        <Button x:Name="DeleteAgent" Margin="10" Click="DeleteAgent_Click" Content="Удалить" FontSize="16"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Клиенты">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="410"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="680"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="InfoClients" Grid.Row="0" Grid.Column="1" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Фамилия" IsReadOnly="True" Binding="{Binding FirstName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Имя" IsReadOnly="True" Binding="{Binding MiddleName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Отчество" IsReadOnly="True" Binding="{Binding LastName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Номер телефона" IsReadOnly="True" Binding="{Binding Phone}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Почта" IsReadOnly="True" Binding="{Binding Email}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Vertical" Grid.Row="0" Margin="10,0,0,0">
+                        <TextBlock Text="Поиск " VerticalAlignment="Top" HorizontalAlignment="Left" Width="235"/>
+                        <TextBox VerticalAlignment="Center" x:Name="SearchClientsTB" TextChanged="SearchClientsTB_TextChanged" Width="215" Height="30" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="10,0,0,0"/>
+                        <Button x:Name="AddClient" Margin="10" Click="AddClient_Click" Content="Добавить" FontSize="16"/>
+                        <Button x:Name="RedactClient" Margin="10" Click="RedactClient_Click" Content="Редактировать" FontSize="16"/>
+                        <Button x:Name="DeleteCLient" Margin="10" Click="DeleteCLient_Click" Content="Удалить" FontSize="16"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Недвижимость">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="410"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="680"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="InfoRealty" Grid.Row="0" Grid.Column="1" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Тип недвижимсоти" IsReadOnly="True" Binding="{Binding TypeRealty}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Адрес" IsReadOnly="True" Binding="{Binding FullAddress}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Координаты" IsReadOnly="True" Binding="{Binding FullCoordinate}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Vertical" Grid.Row="0" Margin="10,0,0,0">
+                        <TextBlock Text="Поиск" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235"/>
+                        <TextBox x:Name="SearchRealtyTB" TextChanged="SearchRealtyTB_TextChanged" Width="215" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <TextBlock Text="Фильтрация по типу недвижимости" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235"/>
+                        <ComboBox VerticalAlignment="Center" x:Name="FiltrRealtyCB" SelectionChanged="FiltrRealtyCB_SelectionChanged" Width="215" Height="30" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="10,0,0,0"/>
+                        <TextBlock Text="Фильтрация по адресу" VerticalAlignment="Top" HorizontalAlignment="Left" Width="235"/>
+                        <ComboBox VerticalAlignment="Center" x:Name="FiltrAdressCB" SelectionChanged="FiltrAdressCB_SelectionChanged" Width="215" Height="30" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="10,0,0,0"/>
+                        <Button x:Name="AddRealty" Margin="10" Click="AddRealty_Click" Content="Добавить" FontSize="16"/>
+                        <Button x:Name="RedactRealty" Margin="10" Click="RedactRealty_Click" Content="Редактировать" FontSize="16"/>
+                        <Button x:Name="DeleteRealty" Margin="10" Click="DeleteRealty_Click" Content="Удалить" FontSize="16"/>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
